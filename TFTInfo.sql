@@ -1,4 +1,3 @@
-drop table champion;
 insert into champion values ('갈리오', '비켜라', 1);
 insert into champion values ('갱플랭크', '불의심판', 1);
 insert into champion values ('나서스', '꽁', 1);
@@ -131,6 +130,6 @@ insert into synerge values('탈리야', '별수호자', '주문투척자', null);
 insert into synerge values('피들스틱', '위협', '타락', null);
 insert into synerge values('피오라', '황소부대', '결투가', null);
 commit;
-drop table synerge;
+
 select * from champion;
 select * from synerge;
