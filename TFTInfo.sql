@@ -60,13 +60,13 @@ insert into champion values ('피들스틱', '어둠의수확', 5);
 insert into champion values ('피오라', '준비태세', 2);
 
 create table champion(
-name nvarchar2(10) primary key is not null,
-skill nvarchar2(15) is not null,
-price number(4),
+    name nvarchar2(10) primary key,
+    skill nvarchar2(15)  not null,
+    price number(4)
 );
 
 create table synerge(
-    name nvarchar2(7) primary key is not null,
+    name nvarchar2(7) primary key,
     synerge1 nvarchar2(15),
     synerge2 nvarchar2(15),
     synerge3 nvarchar2(15)
@@ -131,6 +131,6 @@ insert into synerge values('탈리야', '별수호자', '주문투척자', null);
 insert into synerge values('피들스틱', '위협', '타락', null);
 insert into synerge values('피오라', '황소부대', '결투가', null);
 commit;
-
+drop table synerge;
 select * from champion;
 select * from synerge;
