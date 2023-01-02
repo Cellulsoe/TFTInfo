@@ -1,9 +1,4 @@
-create table Champion(
-    name nvarchar2(7),
-    skill nvarchar2(10),
-    price number(2)
-    );
-
+drop table champion;
 insert into champion values ('갈리오', '비켜라', 1);
 insert into champion values ('갱플랭크', '불의심판', 1);
 insert into champion values ('나서스', '꽁', 1);
@@ -64,4 +59,78 @@ insert into champion values ('탈리야', '바위술사의벽', 4);
 insert into champion values ('피들스틱', '어둠의수확', 5);
 insert into champion values ('피오라', '준비태세', 2);
 
+create table champion(
+name nvarchar2(10) primary key is not null,
+skill nvarchar2(15) is not null,
+price number(4),
+);
 
+create table synerge(
+    name nvarchar2(7) primary key is not null,
+    synerge1 nvarchar2(15),
+    synerge2 nvarchar2(15),
+    synerge3 nvarchar2(15)
+);
+insert into synerge values ('갈리오', '민간인', '마스코트', null);
+insert into synerge values ('갱플랭크', '우세', '결투가', null);
+insert into synerge values ('나서스', '동물특공대', '마스코트', null);
+insert into synerge values ('누누', '기계유망주', '마스코트', null);
+insert into synerge values ('닐라', '별수호자', '결투가', null);
+insert into synerge values ('드레이븐', '메카프라임', '에이스', null);
+insert into synerge values ('람머스', '위협', null, null);
+insert into synerge values ('럭스', '별 수호자', '주문투척자', null);
+insert into synerge values ('레넥톤', '레이저단', '싸움꾼', null);
+insert into synerge values ('레오나', '메카프라임', '무법자', '방패대');
+insert into synerge values ('렐', '별 수호자', '엄호대', null);
+insert into synerge values ('룰루', '기계유망주', '선의', null);
+insert into synerge values ('르블랑', '자동방어체계', '주문투척자', '해커');
+insert into synerge values ('리신', '우세', '선의', '싸움꾼');
+insert into synerge values ('리븐', '동물특공대', '싸움꾼', '엄호대');
+insert into synerge values ('말파이트', '우세', '마스코트', null);
+insert into synerge values ('모데카이저', '레이저단', '에이스', null);
+insert into synerge values ('미스포츈', '동물특공대', '에이스', null);
+insert into synerge values ('바이', '지하세계', '방패대', '싸움꾼');
+insert into synerge values ('베인', '동물특공대', '결투가', '정찰단');
+insert into synerge values('벨베스', '위협', null, null);
+insert into synerge values('벨코즈',  '위협', null, null);
+insert into synerge values('블리츠크랭크', '자동방어체계', '싸움꾼', null);
+insert into synerge values('비에고' ,'황소부대', '무법자', null);
+insert into synerge values('뽀삐' ,'기계유망주', '엄호대', null);
+insert into synerge values('사미라' ,'지하세계', '에이스', '특등사수');
+insert into synerge values('사일러스' ,'동물특공대' ,'무법자', null);
+insert into synerge values('세나' ,'레이저단', '특등사수', null);
+insert into synerge values('세주아니' ,'레이저단', '싸움꾼', null);
+insert into synerge values('세트' ,'메카:프라임' ,'엄호대', null);
+insert into synerge values('소나' ,'지하세계', '선의', ' 주문투척자');
+insert into synerge values('소라카' ,'자동방어체계', '선의', null);
+insert into synerge values('시비르' ,'민간인', '특등사수', null);
+insert into synerge values('신드라' ,' 별 수호자', '선의', null);
+insert into synerge values('아우렐리온솔' ,'위협', null, null);
+insert into synerge values('아펠리오스' ,'병기고', '황소부대', '특등사수');
+insert into synerge values('알리스타' ,' 황소부대', '마스코트', '방패대');
+insert into synerge values('애니' ,'기계유망주', '황소부대', '주문투척자');
+insert into synerge values('애쉬' ,'레이저단', '정찰단', null);
+insert into synerge values('야스오','레이저단', '결투가', null);
+insert into synerge values('에코', '별수호자', '방패대', '익살꾼');
+insert into synerge values('오공', '메카프라임', '엄호대', null);
+insert into synerge values('우르곳', '위협', null, null);
+insert into synerge values('유미', '별수호자', '마스코트', '선의');
+insert into synerge values('이즈리얼', '지하세계', '정찰단', null);
+insert into synerge values('자크', '위협', null, null);
+insert into synerge values('잔나', '민간인', '기상캐스터', '주문투척자');
+insert into synerge values('잭스', '메카프라임', '싸움꾼', null);
+insert into synerge values('제드', '레이저단', '결투가', '해커');
+insert into synerge values('조이', '기계유망주', '익살꾼', '해커');
+insert into synerge values('징크스', '동물특공대', '익살꾼', null);
+insert into synerge values('초가스', '위협', null, null);
+insert into synerge values('카밀', '자동방어체계', '무법자', null);
+insert into synerge values('카이사', '별수호자', '정찰단', null);
+insert into synerge values('케일', '지하세계', '결투가', null);
+insert into synerge values('탈론', '황소부대', '무법자', null);
+insert into synerge values('탈리야', '별수호자', '주문투척자', null);
+insert into synerge values('피들스틱', '위협', '타락', null);
+insert into synerge values('피오라', '황소부대', '결투가', null);
+commit;
+
+select * from champion;
+select * from synerge;
